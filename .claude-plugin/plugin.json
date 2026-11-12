@@ -1,0 +1,10 @@
+{
+  "name": "crest2yab",
+  "version": "0.1.0",
+  "description": "Migrate spaces, tabs and logins (cookies) from the Crest browser to the Yab browser on macOS. Unofficial.",
+  "author": { "name": "donghao0210", "url": "https://github.com/donghao0210" },
+  "homepage": "https://github.com/donghao0210/crest2yab",
+  "repository": "https://github.com/donghao0210/crest2yab",
+  "license": "MIT",
+  "keywords": ["crest", "yab", "browser", "migration", "macos", "cookies"]
+}

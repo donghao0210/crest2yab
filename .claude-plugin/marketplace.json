@@ -1,0 +1,16 @@
+{
+  "name": "crest2yab",
+  "owner": { "name": "donghao0210" },
+  "metadata": { "description": "Unofficial Crest to Yab browser migration skill." },
+  "plugins": [
+    {
+      "name": "crest2yab",
+      "source": "./",
+      "description": "Migrate spaces, tabs and logins (cookies) from the Crest browser to the Yab browser on macOS. Unofficial.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["crest", "yab", "browser", "migration", "macos"]
+    }
+  ]
+}

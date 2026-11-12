@@ -10,6 +10,36 @@ Yab can import from Arc and Dia, but not from Crest. This script fills that gap.
 > `write-spaces` **replaces everything in Yab's sidebar**, so it suits a fresh Yab install best.
 > A backup is made first.
 
+## Use it with an AI agent (easiest)
+
+The repo includes a skill that walks Claude Code or Codex through every step. The agent runs the
+commands; you quit the browsers and click **Allow** on the Keychain prompts. It is told never to
+read your cookie values, and to ask before it changes Yab.
+
+**Claude Code**
+```bash
+claude plugin marketplace add donghao0210/crest2yab
+claude plugin install crest2yab@crest2yab
+```
+
+**Codex**
+```bash
+codex plugin marketplace add donghao0210/crest2yab
+codex plugin add crest2yab@crest2yab
+```
+
+**Any agent that reads skills** (copy the folder in by hand)
+```bash
+git clone https://github.com/donghao0210/crest2yab
+cp -R crest2yab/skills/crest2yab ~/.claude/skills/   # Claude Code
+cp -R crest2yab/skills/crest2yab ~/.agents/skills/   # Codex and other agents
+```
+
+Then restart the agent and say: *"Move my Crest spaces and logins into Yab."*
+
+An agent opened inside a clone of this repo picks up the same instructions from `AGENTS.md`
+(and `CLAUDE.md` for Claude Code).
+
 ## What it moves
 
 | From Crest | To Yab |
@@ -34,7 +64,9 @@ a browser update can break this script. Run `plan` first; it changes nothing.
 
 ## Usage
 
-Run these in order, using `uv run crest2yab.py <step>` (or `python3 crest2yab.py <step>`).
+Clone the repo, then run these in order from its folder, using `uv run crest2yab.py <step>`
+(or `python3 crest2yab.py <step>`). `crest2yab.py` is a link to the real script in
+`skills/crest2yab/scripts/`.
 
 | # | Step | Browsers | What happens |
 |---|---|---|---|
